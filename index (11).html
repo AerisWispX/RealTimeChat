@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <div id="chat_container">
+            <div id="chat_header">
+                <h3>Live Chat</h3>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider"></div>
+                    </label>
+                </div>
+                <button id="user_settings">⚙️</button>
+            </div>
+            <div id="chat_content_container">
+                <!-- Chat messages will be appended here -->
+            </div>
+            <div id="typing_indicator"></div>
+            <div id="chat_input_container">
+                <input type="text" id="chat_input" placeholder="Message">
+                <button id="chat_input_send">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3v7l15 2-15 2z" />
+                    </svg>
+                </button>
+                <button id="like_button">❤️</button>
+                <div id="emoji_picker">
+                    <span class="emoji">🔥</span>
+                    <span class="emoji">😹</span>
+                    <span class="emoji">🥲</span>
+                    <span class="emoji">⚽</span>
+                    <span class="emoji">🐐</span>
+                </div>
+            </div>
+            <div class="bubble-container"></div>
+        </div>
+        <div id="settings_modal">
+            <div id="settings_content">
+                <h3>User Settings</h3>
+                <input type="text" id="username_input" placeholder="Change username">
+                <input type="text" id="avatar_input" placeholder="Avatar URL">
+                <button id="save_settings">Save Settings</button>
+                <button id="close_settings">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js'></script>
+    <script src='https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js'></script>
+    <script src='index.js'></script>
+</body>
+</html>
